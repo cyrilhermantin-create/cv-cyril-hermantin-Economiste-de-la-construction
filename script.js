@@ -13,7 +13,7 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
 // Fonction d’initialisation du QR Code
 function initQRCode() {
     // Lien vers votre CV (ou LinkedIn) – modifiez si besoin
-    const url = "https://cyrilhermantin-create.github.io/cv-cyril-hermantin/";
+    const url = "https://cyrilhermantin-create.github.io/cv-cyril-hermantin-Economiste-de-la-construction/";
 
     // Nettoyer le conteneur au cas où le script serait exécuté plusieurs fois
     const container = document.getElementById("qrContainer");
