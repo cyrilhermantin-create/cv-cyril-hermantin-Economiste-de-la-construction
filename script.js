@@ -35,6 +35,55 @@ function initQRCode() {
     caption.textContent = "Scannez pour voir le CV en ligne";
     container.appendChild(caption);
 }
+/* ----------------- Scroll‑Spy ----------------- */
+function activateNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.sticky-nav a');
+
+    const scrollPos = window.scrollY + 120; // offset pour tenir compte du header
+
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        if (scrollPos >= top && scrollPos < bottom) {
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+        }
+    });
+}
+window.addEventListener('scroll', activateNavLink);
+activateNavLink(); // exécuter au chargement
+
+
+/* ----------------- Back‑to‑top button ----------------- */
+function addBackToTop() {
+    const btn = document.createElement('button');
+    btn.id = 'backToTop';
+    btn.textContent = '↑ Retour en haut';
+    btn.title = 'Remonter en haut de la page';
+    btn.style.position = 'fixed';
+    btn.style.right = '1rem';
+    btn.style.bottom = '1rem';
+    btn.style.padding = '.6rem .9rem';
+    btn.style.background = 'var(--accent)';
+    btn.style.color = '#fff';
+    btn.style.border = 'none';
+    btn.style.borderRadius = '4px';
+    btn.style.cursor = 'pointer';
+    btn.style.opacity = '0';
+    btn.style.transition = 'opacity .3s';
+
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+        btn.style.opacity = (window.scrollY > 300) ? '1' : '0';
+    });
+}
+addBackToTop();
 
 // Lancer l’initialisation quand le DOM est prêt
 document.addEventListener("DOMContentLoaded", initQRCode);
