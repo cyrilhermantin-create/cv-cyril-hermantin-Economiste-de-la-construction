@@ -273,3 +273,31 @@ details[open] > *:not(summary) {
         transform: translateY(0);
     }
 }
+/* -------------------------------------------------
+   Galerie projets – images + légendes
+------------------------------------------------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.gallery-item {
+    text-align: center;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+.gallery-item figcaption {
+    margin-top: .4rem;
+    font-size: .85rem;
+    color: #555;
+}
