@@ -219,3 +219,41 @@ button:hover { background:#1c5980; }
     height:1rem;
     cursor:pointer;
 }
+/* -------- Sticky navigation -------- */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0;
+}
+.sticky-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: .6rem 0;
+    margin: 0;
+    list-style: none;
+}
+.sticky-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+}
+.sticky-nav a:hover,
+.sticky-nav a.active {
+    color: var(--accent);
+}
+
+/* Smooth scrolling for the whole page */
+html { scroll-behavior: smooth; }
+
+/* Hover lift on cards */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+/* Scroll‑spy : couleur du lien actif (ajoutée dynamiquement) */
