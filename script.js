@@ -1,14 +1,43 @@
-// Fonction de téléchargement PDF avec html2pdf.js
-document.getElementById('downloadBtn').addEventListener('click', () => {
-    const element = document.body; // toute la page
-    const opt = {
-        margin:       0.5,
-        filename:     'CV_Cyril_Hermantin.pdf',
-        image:        { type:'jpeg', quality:0.98 },
-        html2canvas:  { scale:2 },
-        jsPDF:        { unit:'in', format:'a4', orientation:'portrait' }
-    };
-    html2pdf().set(opt).from(element).save();
+/* -------------------------------------------------
+   script.js – génération du PDF (html2pdf)
+------------------------------------------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    if (!downloadBtn) {
+        console.warn("Bouton de téléchargement introuvable – vérifiez l'ID.");
+        return;
+    }
+
+    downloadBtn.addEventListener("click", () => {
+        // Sélection précise du conteneur du CV
+        const cvElement = document.querySelector("main.container");
+
+        if (!cvElement) {
+            alert("Impossible de localiser le contenu du CV à exporter.");
+            return;
+        }
+
+        // Options html2pdf – vous pouvez les ajuster
+        const opt = {
+            margin:       0.5,                       // marge en pouces
+            filename:     "CV_Cyril_HERMANTIN_Economiste de la Construction.pdf",
+            image:        { type: "jpeg", quality: 0.98 },
+            html2canvas:  { scale: 2, logging: false, useCORS: true }, // haute résolution
+            jsPDF:        { unit: "in", format: "a4", orientation: "portrait" }
+        };
+
+        // Génération du PDF
+        html2pdf()
+            .set(opt)
+            .from(cvElement)   // <-- le bon sélecteur
+            .save()
+            .catch(err => {
+                console.error("Erreur lors de la génération du PDF :", err);
+                alert("Une erreur est survenue lors de la création du PDF. Consultez la console du navigateur.");
+            });
+    });
 });
 // Fonction d’initialisation du QR Code
 function initQRCode() {
