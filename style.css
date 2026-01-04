@@ -19,6 +19,14 @@
         --text:    #e0e0e0;      /* texte général */
         --light:   #1e1e1e;      /* cartes / cards */
     }
+   /* Si l'utilisateur force le mode sombre via le switch */
+.manual-dark {
+    --primary: #e0e0e0;
+    --accent:  #4da6ff;
+    --bg:      #121212;
+    --text:    #e0e0e0;
+    --light:   #1e1e1e;
+}
 
     /* Inverser les ombres pour le mode sombre */
     .card {
