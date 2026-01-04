@@ -336,7 +336,38 @@ details[open] > *:not(summary) {
 .lb-data .lb-close {
     filter: invert(1);   /* icône de fermeture blanche sur fond sombre */
 }
+/* -------------------------------------------------
+   Liste de documents / photos (ouverture dans nouvel onglet)
+------------------------------------------------- */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+.doc-list li {
+    margin-bottom: .6rem;
+}
+.doc-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    transition: color .2s, background .2s;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+}
+.doc-link:hover {
+    background: rgba(0,0,0,.05);
+    color: var(--accent);
+}
 
+/* Petite adaptation pour le mode sombre (si vous avez le switch) */
+@media (prefers-color-scheme: dark) {
+    .doc-link:hover {
+        background: rgba(255,255,255,.08);
+    }
+}
 
 
 
