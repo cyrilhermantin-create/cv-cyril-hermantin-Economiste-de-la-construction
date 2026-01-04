@@ -198,3 +198,16 @@ button:hover { background:#1c5980; }
 .proj-details li {
     margin-bottom:0.3rem;
 }
+
+/* Switch visuel simple */
+.theme-switch {
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+    margin-top:.8rem;
+}
+.theme-switch input[type="checkbox"] {
+    width:1rem;
+    height:1rem;
+    cursor:pointer;
+}
