@@ -8,6 +8,34 @@
     --text:#333;
     --light:#fff;
 }
+/* -------------------------------------------------
+   Thèmes – clair (défaut) & sombre (prefers-color-scheme)
+------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #e0e0e0;      /* texte principal clair */
+        --accent:  #4da6ff;      /* accent bleu pastel */
+        --bg:      #121212;      /* fond très sombre */
+        --text:    #e0e0e0;      /* texte général */
+        --light:   #1e1e1e;      /* cartes / cards */
+    }
+
+    /* Inverser les ombres pour le mode sombre */
+    .card {
+        box-shadow: 0 2px 6px rgba(255,255,255,.05);
+    }
+
+    a, .linkedin {
+        color: var(--accent);
+    }
+
+    /* Ajuster le contraste des éléments de formulaire / boutons */
+    button {
+        background: var(--accent);
+        color:#111;
+    }
+    button:hover { background:#73c2ff; }
+}
 
 /* -------------------------------------------------
    Reset & typographie de base
