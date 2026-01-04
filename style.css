@@ -107,3 +107,10 @@ button:hover { background:#1c5980; }
     text-decoration:none;
 }
 .btn:hover { background:#1a5276; }
+
+<section class="card">
+    <h2>Lettre de recommandation (PDF)</h2>
+    <iframe src="Lettre_de_recommandation_1.pdf"
+            width="100%" height="500px"
+            style="border:1px solid #ddd;"></iframe>
+</section>
