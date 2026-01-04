@@ -38,3 +38,21 @@ function initQRCode() {
 
 // Lancer l’initialisation quand le DOM est prêt
 document.addEventListener("DOMContentLoaded", initQRCode);
+// Gestion du switch manuel du thème
+(function () {
+    const toggle = document.getElementById('themeToggle');
+    if (!toggle) return;   // safety
+
+    // Au chargement, synchroniser l’état avec le thème système
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    toggle.checked = prefersDark;
+
+    // Appliquer la classe "dark" sur <html> lorsqu’on coche la case
+    toggle.addEventListener('change', function () {
+        if (this.checked) {
+            document.documentElement.classList.add('manual-dark');
+        } else {
+            document.documentElement.classList.remove('manual-dark');
+        }
+    });
+})();
