@@ -10,3 +10,31 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     };
     html2pdf().set(opt).from(element).save();
 });
+// Fonction d’initialisation du QR Code
+function initQRCode() {
+    // Lien vers votre CV (ou LinkedIn) – modifiez si besoin
+    const url = "https://cyrilhermantin-create.github.io/cv-cyril-hermantin/";
+
+    // Nettoyer le conteneur au cas où le script serait exécuté plusieurs fois
+    const container = document.getElementById("qrContainer");
+    container.innerHTML = "";   // reset
+
+    // Crée le QR Code
+    new QRCode(container, {
+        text: url,
+        width: 150,
+        height: 150,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H   // haute correction d’erreurs
+    });
+
+    // Ajoute une légende sous le QR
+    const caption = document.createElement("p");
+    caption.className = "qr-caption";
+    caption.textContent = "Scannez pour voir le CV en ligne";
+    container.appendChild(caption);
+}
+
+// Lancer l’initialisation quand le DOM est prêt
+document.addEventListener("DOMContentLoaded", initQRCode);
