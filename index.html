@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Feuille de style -->
     <link rel="stylesheet" href="style.css">
+       <style>
+        /* Animation douce pour les détails (accordéons) */
+        details[open] > *:not(summary) {
+            animation: fadeIn .25s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
     <div id="qrContainer" class="qr-wrapper"></div>
 </head>
     <nav class="sticky-nav">
