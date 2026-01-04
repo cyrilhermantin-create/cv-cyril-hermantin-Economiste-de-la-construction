@@ -301,3 +301,43 @@ details[open] > *:not(summary) {
     font-size: .85rem;
     color: #555;
 }
+/* -------------------------------------------------
+   Galerie projets – vignettes + Lightbox
+------------------------------------------------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.gallery-item {
+    text-align: center;
+}
+.gallery-item img.thumb {
+    width: 100%;               /* occupe toute la largeur de la cellule */
+    max-width: 150px;          /* taille maximale de la vignette */
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.gallery-item img.thumb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+.gallery-item figcaption {
+    margin-top: .4rem;
+    font-size: .85rem;
+    color: #555;
+}
+
+/* Lightbox overlay – on garde les réglages par défaut,
+   mais on peut ajuster la couleur du fond si besoin */
+.lb-data .lb-close {
+    filter: invert(1);   /* icône de fermeture blanche sur fond sombre */
+}
+
+
+
+
+
