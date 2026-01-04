@@ -83,6 +83,80 @@ function addBackToTop() {
         btn.style.opacity = (window.scrollY > 300) ? '1' : '0';
     });
 }
+/* ------------------------------------------------------------------
+   script.js – fonctions communes du CV
+   - génération PDF (html2pdf.js)
+   - QR‑code (Google Chart ou QRCode.js)
+   - scroll‑spy, back‑to‑top, etc.
+------------------------------------------------------------------ */
+
+/* ---------- 1️⃣  Génération du PDF ---------- */
+document.addEventListener("DOMContentLoaded", () => {
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    if (!downloadBtn) {
+        console.warn("Bouton de téléchargement introuvable.");
+        return;
+    }
+
+    downloadBtn.addEventListener("click", () => {
+        // Le conteneur qui contient tout le CV
+        const cvElement = document.querySelector("main.container");
+
+        if (!cvElement) {
+            alert("Impossible de trouver le contenu du CV à exporter.");
+            return;
+        }
+
+        // Options html2pdf – vous pouvez les ajuster
+        const opt = {
+            margin:       0.5,                 // marges en pouces
+            filename:     "CV_Cyril_Hermantin_Economiste.pdf",
+            image:        { type: "jpeg", quality: 0.98 },
+            html2canvas:  { scale: 2, logging: false, useCORS: true },
+            jsPDF:        { unit: "in", format: "a4", orientation: "portrait" }
+        };
+
+        // Génération du PDF
+        html2pdf()
+            .set(opt)
+            .from(cvElement)   // <-- le bon sélecteur
+            .save()
+            .catch(err => {
+                console.error("Erreur lors de la création du PDF :", err);
+                alert("Une erreur est survenue lors de la génération du PDF. Consultez la console du navigateur.");
+            });
+    });
+});
+
+/* ---------- 2️⃣  QR‑code (Google Chart) ---------- */
+// Si vous utilisez le QR‑code via Google Chart, il suffit de mettre à jour l’URL
+// (voir la réponse précédente). Aucun code JS supplémentaire n’est requis.
+
+// Si vous utilisez QRCode.js (version locale) :
+function initQRCode() {
+    const url = "https://cyrilhermantin-create.github.io/cv-cyril-hermantin-Economiste-de-la-construction/";
+    const container = document.getElementById("qrContainer");
+    if (!container) return;
+    container.innerHTML = "";
+    new QRCode(container, {
+        text: url,
+        width: 150,
+        height: 150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+    const caption = document.createElement("p");
+    caption.className = "qr-caption";
+    caption.textContent = "Scannez pour voir le CV d’économiste";
+    container.appendChild(caption);
+}
+document.addEventListener("DOMContentLoaded", initQRCode);
+
+/* ---------- 3️⃣  Scroll‑spy & back‑to‑top (déjà présent) ---------- */
+/* (conservez le code que vous aviez déjà ajouté) */
+
 addBackToTop();
 
 // Lancer l’initialisation quand le DOM est prêt
