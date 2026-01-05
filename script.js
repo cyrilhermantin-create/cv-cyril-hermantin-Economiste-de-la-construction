@@ -22,7 +22,7 @@
          // Options html2pdf – vous pouvez les ajuster
     //      const opt = {
      //         margin:       0.5,                       // marge en pouces
-     //         filename:     "CV_Cyril_HERMANTIN_Economiste de la Construction.pdf",
+     //         filename:     "CV_Cyril_HERMANTIN_Economiste_de_la_Construction.pdf",
      //         image:        { type: "jpeg", quality: 0.98 },
       //        html2canvas:  { scale: 2, logging: false, useCORS: true }, // haute résolution
        //       jsPDF:        { unit: "in", format: "a4", orientation: "portrait" }
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Options html2pdf – vous pouvez les ajuster
         const opt = {
             margin:       0.5,                 // marges en pouces
-            filename:     "CV_Cyril_Hermantin_Economiste.pdf",
+            filename:     "CV_Cyril_HERMANTIN_Economiste_de_la_Construction.pdf",
             image:        { type: "jpeg", quality: 0.98 },
             html2canvas:  { scale: 2, logging: false, useCORS: true },
             jsPDF:        { unit: "in", format: "a4", orientation: "portrait" }
