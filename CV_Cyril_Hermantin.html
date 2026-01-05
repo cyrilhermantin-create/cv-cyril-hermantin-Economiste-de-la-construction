@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Cyril Hermantin</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 0; }
+            .no-print { display: none; }
+            .cv-container { box-shadow: none; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .print-instructions {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .print-instructions h2 {
+            margin: 0 0 10px 0;
+            border: none;
+            color: white;
+        }
+        
+        .cv-container {
+            background: white;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .profil-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .atouts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .atout-item {
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        
+        .experience {
+            margin-bottom: 18px;
+        }
+        
+        .experience-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+        
+        .experience-date {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 13px;
+        }
+        
+        ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .cert-box {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #27ae60;
+        }
+        
+        .formation-item {
+            margin-bottom: 10px;
+        }
+        
+        .testimonial {
+            background: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            margin: 15px 0;
+            font-style: italic;
+            font-size: 13px;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 8px;
+            font-style: normal;
+        }
+        
+        .projet {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .projet-title {
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .missions-list {
+            columns: 2;
+            column-gap: 20px;
+        }
+        
+        @media (max-width: 800px) {
+            .atouts, .certifications, .missions-list {
+                grid-template-columns: 1fr;
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-instructions no-print">
+        <h2>📄 Pour télécharger ce CV en PDF</h2>
+        <p><strong>Appuyez sur Ctrl + P (Windows) ou Cmd + P (Mac)</strong><br>
+        Puis sélectionnez "Enregistrer au format PDF" comme destination</p>
+    </div>
+    
+    <div class="cv-container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Cyril HERMANTIN</h1>
+            <div class="subtitle">Économiste de la construction – Métreur</div>
+            <div class="contact-info">
+                📍 Saint-Paul, 97180 Sainte-Anne | 📞 06 91 28 77 50 | 🚗 Permis B, véhiculé<br>
+                ✉️ cyril.hermantin@gmail.com | 🔗 LinkedIn: linkedin.com/in/cyril-hermantin-157617201<br>
+                ✅ <strong>Disponible immédiatement</strong>
+            </div>
+        </div>
+        
+        <!-- PROFIL -->
+        <div class="section">
+            <h2>Profil</h2>
+            <div class="profil-box">
+                Conducteur de travaux TCE certifié SS4, doté de 10 mois d'expérience en désamiantage sur sites occupés.
+                Profil hybride spécialisé dans la gestion de chantiers de réhabilitation, le management des risques liés à l'amiante,
+                ainsi que l'étude économique et le métrage de projets de construction.
+            </div>
+        </div>
+        
+        <!-- ATOUTS PROFESSIONNELS -->
+        <div class="section">
+            <h2>Atouts professionnels</h2>
+            <div class="atouts">
+                <div class="atout-item">🔧 <strong>Profil hybride</strong> : technique + terrain + gestion</div>
+                <div class="atout-item">🏗️ <strong>Expérience en site occupé</strong> : coordination, sécurité, communication</div>
+                <div class="atout-item">🚀 <strong>Opérationnel immédiatement</strong> : disponible, certifié, autonome</div>
+                <div class="atout-item">💡 <strong>Double compétence</strong> : technique & économie = réduction des coûts</div>
+                <div class="atout-item">🤝 <strong>Leadership naturel</strong> : encadrement d'équipes, gestion humaine</div>
+            </div>
+        </div>
+        
+        <!-- MISSIONS -->
+        <div class="section">
+            <h2>Missions d'économiste de la construction – Métreur</h2>
+            <div class="missions-list">
+                <ul>
+                    <li>Analyse des appels d'offres et des cahiers des charges</li>
+                    <li>Réalisation des métrés et chiffrages (bâtiment, taille de pierre)</li>
+                    <li>Établissement des devis, études de prix et mémoires techniques</li>
+                    <li>Consultation fournisseurs / sous-traitants pour optimisation</li>
+                    <li>Suivi des coûts, respect du budget et gestion des réserves</li>
+                    <li>Collaboration avec les conducteurs de travaux</li>
+                    <li>Gestion administrative du dossier technique (DOE, plans EXE, réunions)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- EXPÉRIENCES PROFESSIONNELLES -->
+        <div class="section">
+            <h2>Expériences professionnelles</h2>
+            
+            <div class="experience">
+                <div class="experience-title">Assistant Conducteur de Travaux – Impresa Pizzarotti & C. S.p.A</div>
+                <div class="experience-date">Septembre 2025 - Janvier 2026 | Guadeloupe</div>
+                <ul>
+                    <li>Suivi et pointage quotidien de réserve, contrôle de l'avancement des levées</li>
+                    <li>Coordination avec les entreprises pour accélérer les levées</li>
+                    <li>Reporting régulier avec la direction de chantier</li>
+                    <li>Encadrement et gestion d'équipes (> 10 personnes)</li>
+                    <li>Suivi des travaux de gros œuvre</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <div class="experience-title">Conducteur de Travaux – Baso Caraïbes</div>
+                <div class="experience-date">2024 - 2025 | Guadeloupe</div>
+                <ul>
+                    <li>Réhabilitation SS4 (peinture, revêtements, maçonnerie) – Résidence Bergevin (site occupé)</li>
+                    <li>Encadrement technique SS4 et gestion d'équipes (> 10 personnes)</li>
+                    <li>Management, planification, suivi financier, relation client</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <div class="experience-title">Maraîcher Bio – Lou Cazalas</div>
+                <div class="experience-date">2023 - 2024</div>
+                <ul>
+                    <li>Gestion complète de l'exploitation, planification des cultures et récoltes</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <div class="experience-title">OP-Earl – Les 2 sources</div>
+                <div class="experience-date">2021 - 2023</div>
+                <ul>
+                    <li>Logistique de cueillettes, planification, préparation de commandes et livraisons</li>
+                </ul>
+            </div>
+            
+            <div class="experience">
+                <div class="experience-title">Professeur / Formateur – Éducation Nationale</div>
+                <div class="experience-date">2003 - 2020</div>
+                <ul>
+                    <li>Pédagogie, encadrement d'élèves, conception de supports de cours</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- PROJETS DE MÉTRAGE & CHIFFRAGE -->
+        <div class="section">
+            <h2>Projets de métrage & chiffrage</h2>
+            
+            <div class="projet">
+                <div class="projet-title">Ravalement et réhabilitation de la Résidence Karukera – Pointe-à-Pitre</div>
+                <div class="experience-date">Février 2025</div>
+                <p>Métrage complet d'un bâtiment de 4 étages datant de 1980 incluant le ravalement de façade, la reprise des cages d'escalier, les menuiseries intérieures (baies vitrées) sur les loggias, l'enlèvement et la pose.</p>
+                <p><strong>Logiciels utilisés :</strong> Excel, AutoCAD 2025<br>
+                <strong>Livrables :</strong> relevés de mesure et croquis</p>
+            </div>
+            
+            <div class="projet">
+                <div class="projet-title">Réhabilitation de la Résidence BERGEVIN – Pointe-à-Pitre</div>
+                <div class="experience-date">Juillet 2023 - Août 2025</div>
+                <p>239 logements HLM répartis dans 12 bâtiments de 4 étages, et 8 commerces. Chiffrage des restructurations des supports extérieurs - traitement et peinture des façades en coordination avec la MOE et le bureau de contrôle.</p>
+                <p><strong>Valeur estimée :</strong> 5 924 €<br>
+                <strong>Logiciels :</strong> Revit 2023, Excel (VBA macro)<br>
+                <strong>Résultat :</strong> réduction de 7% du coût prévisionnel grâce à l'optimisation des quantités</p>
+            </div>
+        </div>
+        
+        <!-- FORMATIONS -->
+        <div class="section">
+            <h2>Formations</h2>
+            
+            <div class="formation-item">
+                <strong>Titre RNCP Technicien Supérieur Travaux Public option Economiste de la Construction</strong> (2025)<br>
+                ESCTP
+            </div>
+            
+            <div class="formation-item">
+                <strong>BP Responsable d'Exploitation Agricole Maraîchage AgroEcologique</strong> (2024)<br>
+                Lycée Agricole Jean Monnet, CFPPA de Lannemezan
+            </div>
+            
+            <div class="formation-item">
+                <strong>Capes Maths</strong> (2017) – Éducation Nationale
+            </div>
+            
+            <div class="formation-item">
+                <strong>Capet de Technologie / Maîtrise de Génie Mécanique (niveau)</strong> (2003)<br>
+                Université Antilles Guyane
+            </div>
+            
+            <div class="formation-item">
+                <strong>Licence Génie Mécanique</strong> (2002) – Université Antilles Guyane
+            </div>
+            
+            <div class="formation-item">
+                <strong>DEUG STPI (Sciences et Technologie pour l'Ingénieur)</strong> (1999)<br>
+                Université Antilles Guyane
+            </div>
+            
+            <div class="formation-item">
+                <strong>Bac S</strong> (1995) – Lycée Charles Coeffin
+            </div>
+            
+            <h3>Autres formations</h3>
+            <ul style="font-size: 13px;">
+                <li>Compta pour tous + Analyse financière pour tous - CNAM de Paris - MOOC (2024)</li>
+                <li>Formation E-commerce - Création de sites webs et portails de vente en ligne - CPF (2020)</li>
+                <li>BTS Système Numérique - CNED (2015)</li>
+                <li>UE Statistique - CNAM de Paris (2014)</li>
+            </ul>
+        </div>
+        
+        <!-- HABILITATIONS & COMPÉTENCES -->
+        <div class="section">
+            <h2>Habilitations & Certifications</h2>
+            <div class="certifications">
+                <div class="cert-box">
+                    <strong>Encadrant technique SS4</strong><br>
+                    Certifié du 9 au 13 déc. 2024
+                </div>
+                <div class="cert-box">
+                    <strong>Échafaudages fixes</strong><br>
+                    Certifié le 22 nov. 2024
+                </div>
+                <div class="cert-box">
+                    <strong>SST</strong><br>
+                    22 et 23 déc. 2025
+                </div>
+                <div class="cert-box">
+                    <strong>H0B0 (habilitation électrique)</strong><br>
+                    30 déc. 2025
+                </div>
+            </div>
+        </div>
+        
+        <!-- COMPÉTENCES TECHNIQUES -->
+        <div class="section">
+            <h2>Compétences techniques</h2>
+            <ul>
+                <li>Management d'équipes & formation sécurité</li>
+                <li>Planification & suivi budgétaire</li>
+                <li>Soudure (Arc/TIG/MIG)</li>
+                <li>Carrelage, peinture, maçonnerie</li>
+                <li>CAO/DAO : AutoCAD, SketchUp, Revit</li>
+                <li>Pack Office – Excel avancé (tableaux croisés, macros)</li>
+                <li>Logiciels de métrage</li>
+            </ul>
+        </div>
+        
+        <!-- TÉMOIGNAGES -->
+        <div class="section">
+            <h2>Témoignages</h2>
+            
+            <div class="testimonial">
+                "Cyril a su gérer notre chantier en site occupé avec rigueur et humanité. Un vrai professionnel."
+                <div class="testimonial-author">— Mr Neola, Chargé d'opération SIKOA Résidence Bergevin</div>
+            </div>
+            
+            <div class="testimonial">
+                "Son profil atypique est un atout : il comprend les enjeux techniques et économiques."
+                <div class="testimonial-author">— M. BOUCHTA, formateur ESCTP</div>
+            </div>
+            
+            <div class="testimonial">
+                "Un profil évolutif qui allie une solide base technique à une compréhension déjà mature des réalités économiques du chantier."
+                <div class="testimonial-author">— M. Eric JEANNOT, Ingénieur Conseil & Expert en Réhabilitation</div>
+            </div>
+        </div>
+        
+        <!-- RECOMMANDATION -->
+        <div class="section">
+            <h2>Recommandation professionnelle</h2>
+            
+            <div class="testimonial">
+                "C'est avec un réel plaisir que je recommande M. Cyril HERMANTIN, qui a collaboré avec Impresa Pizzarotti sur le chantier du nouveau CHU des Abymes en tant qu'assistant conducteur de travaux intérimaire du 22 septembre au 31 janvier 2026. Au cours de sa mission, il a coordonné la levée de plus de 1 000 réserves, en levant 908 d'entre elles (taux de réalisation 90%)."
+                <div class="testimonial-author">— Responsable de projet, Impresa Pizzarotti</div>
+            </div>
+        </div>
+        
+    </div>
+<footer class="footer">
+    <div class="qr-footer">
+        <p>Scannez pour accéder à la version interactive du CV :</p>
+        <img src="assets/qr_cv_interactif.png"
+             alt="QR code vers le CV interactif"
+             class="qr-img">
+    </div>
+    © 2024 Cyril Hermantin – Tous droits réservés
+</footer>
+</body>
+</html>
