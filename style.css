@@ -383,6 +383,80 @@ details[open] > *:not(summary) {
 .btn-download:hover {
     background: #1c5980;
 }
+/* -------------------------------------------------
+   Carte de visite – section Profil
+------------------------------------------------- */
+.profile-card {
+    display: flex;
+    flex-direction: row;          /* photo à gauche, texte à droite */
+    align-items: center;
+    gap: 1.5rem;                  /* espace entre photo et texte */
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* Photo à l’intérieur de la carte */
+.profile-photo {
+    flex-shrink: 0;               /* empêche la photo de rétrécir */
+}
+.profile-photo .photo-medaillon {
+    width: 120px;                 /* taille légèrement plus petite que dans le header */
+    height: 120px;
+    border: 3px solid var(--accent);
+}
+
+/* Infos texte */
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+.profile-info .subtitle {
+    margin: .3rem 0 .8rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Liste de contacts */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: .95rem;
+    line-height: 1.6;
+}
+.contact-list li {
+    margin-bottom: .4rem;
+}
+.contact-list a {
+    color: var(--accent);
+    text-decoration: none;
+}
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive : sur petit écran, la photo passe au-dessus du texte */
+@media (max-width: 560px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-photo {
+        margin-bottom: 1rem;
+    }
+}
+.qr-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.qr-img {
+    width: 130px;               /* taille adaptée au PDF */
+    height: auto;
+    margin-top: .4rem;
+}
 
 
 
