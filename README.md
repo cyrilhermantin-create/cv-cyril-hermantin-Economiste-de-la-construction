@@ -42,8 +42,6 @@ Le CV en ligne est une page web statique (HTML, CSS, JavaScript) hébergée sur 
 ├── script.js      Comportements de la page
 ├── js/            Bibliothèques JavaScript (QR code)
 ├── assets/        Ressources du site
-├── Photo*.jpg     Photos du portfolio et des projets
-├── photo-cyril.jpg  Portrait
 ├── CV_Cyril_Hermantin_Economiste_Conducteur_Travaux_TCE.pdf   CV à télécharger
 └── README.md      Ce fichier
 ```
