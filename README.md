@@ -32,7 +32,6 @@ Le CV en ligne est une page web statique (HTML, CSS, JavaScript) hébergée sur 
 - les compétences techniques ;
 - des projets de métrage et de chiffrage, avec galerie de photos ;
 - des témoignages (client, formateur, expert en réhabilitation) ;
-- un portfolio photo du chantier du CHU des Abymes ;
 - un formulaire de contact, un mode sombre et un QR code renvoyant vers le CV en ligne.
 
 ## Structure du dépôt
